@@ -1,0 +1,2214 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Avalon - EBS CORE",
+    "description": "The Enterprise Service Bus (ESB) connects different applications, enabling seamless communication and data exchange between them.",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://192.168.10.153:32280",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/v0/providers/{providerId}": {
+      "get": {
+        "tags": [
+          "provider-controller"
+        ],
+        "operationId": "getProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProviderDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "provider-controller"
+        ],
+        "operationId": "updateProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProviderUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "provider-controller"
+        ],
+        "operationId": "deleteProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/websocket/{protocolId}": {
+      "put": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "updateWebSocketProtocol",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebSocketProtocolUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/kafka/{protocolId}": {
+      "put": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "updateKafkaProtocol",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KafkaProtocolUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/http/{protocolId}": {
+      "put": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "updateHttpProtocol",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HttpProtocolUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operations/websocket/{operationId}": {
+      "put": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "updateWebSocketOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebSocketOperationUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operations/kafka/{operationId}": {
+      "put": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "updateKafkaOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KafkaOperationUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operations/http/{operationId}": {
+      "put": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "updateHttpOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HttpOperationUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operationObjects/{operationObjectId}": {
+      "get": {
+        "tags": [
+          "operation-object-controller"
+        ],
+        "operationId": "getById",
+        "parameters": [
+          {
+            "name": "operationObjectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationObjectDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "operation-object-controller"
+        ],
+        "operationId": "updateOperationObject",
+        "parameters": [
+          {
+            "name": "operationObjectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationObjectUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "operation-object-controller"
+        ],
+        "operationId": "deleteOperationObject",
+        "parameters": [
+          {
+            "name": "operationObjectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v0/integrations/{id}": {
+      "get": {
+        "tags": [
+          "integration-controller"
+        ],
+        "operationId": "getIntegration",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntegrationDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "integration-controller"
+        ],
+        "operationId": "updateIntegration",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntegrationUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "integration-controller"
+        ],
+        "operationId": "deleteIntegration",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v0/providers/{providerId}/protocols/websocket": {
+      "post": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "createWebSocketProtocol",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebSocketProtocolCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/providers/{providerId}/protocols/kafka": {
+      "post": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "createKafkaProtocol",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KafkaProtocolCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/providers/{providerId}/protocols/http": {
+      "post": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "createHttpProtocol",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HttpProtocolCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/{protocolId}/operations/websocket": {
+      "post": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "createWebSocketOperation",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WebSocketOperationCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/{protocolId}/operations/kafka": {
+      "post": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "createKafkaOperation",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KafkaOperationCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/{protocolId}/operations/http": {
+      "post": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "createHttpOperation",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HttpOperationCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operations/{operationId}/operationObjects": {
+      "get": {
+        "tags": [
+          "operation-object-controller"
+        ],
+        "operationId": "getAllByOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OperationObjectDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "operation-object-controller"
+        ],
+        "operationId": "createOperationObject",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OperationObjectCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/integrations": {
+      "get": {
+        "tags": [
+          "integration-controller"
+        ],
+        "operationId": "getAllIntegrations",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IntegrationDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "integration-controller"
+        ],
+        "operationId": "createIntegration",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntegrationCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/integrations/{integrationId}/providers": {
+      "get": {
+        "tags": [
+          "provider-controller"
+        ],
+        "operationId": "getProvidersByIntegration",
+        "parameters": [
+          {
+            "name": "integrationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProviderDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "provider-controller"
+        ],
+        "operationId": "createProvider",
+        "parameters": [
+          {
+            "name": "integrationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProviderCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/providers/{providerId}/protocols": {
+      "get": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "getProtocolsByProvider",
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProtocolDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/{protocolId}": {
+      "get": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "getProtocol",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProtocolDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "protocol-controller"
+        ],
+        "operationId": "deleteProtocol",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v0/protocols/{protocolId}/operations": {
+      "get": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "getOperationsByProtocol",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OperationDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operations/{operationId}": {
+      "get": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "getOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "operation-controller"
+        ],
+        "operationId": "deleteOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v0/operationLog": {
+      "get": {
+        "tags": [
+          "operation-log-controller"
+        ],
+        "operationId": "getAllLogs",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageOperationLogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operationLog/{operationLogId}": {
+      "get": {
+        "tags": [
+          "operation-log-controller"
+        ],
+        "operationId": "getLogsByIntegration",
+        "parameters": [
+          {
+            "name": "operationLogId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationLogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operationLog/status/{status}": {
+      "get": {
+        "tags": [
+          "operation-log-controller"
+        ],
+        "operationId": "getLogsByStatus",
+        "parameters": [
+          {
+            "name": "status",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "RECEIVED",
+                "INVALID_OPERATION",
+                "INVALID_DATA",
+                "PROVIDER_ERROR",
+                "SUCCESS",
+                "FAILURE",
+                "UNKNOWN"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageOperationLogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operationLog/integration/{integrationId}": {
+      "get": {
+        "tags": [
+          "operation-log-controller"
+        ],
+        "operationId": "getLogsByIntegration_1",
+        "parameters": [
+          {
+            "name": "integrationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageOperationLogDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/operationContext/{operationId}": {
+      "get": {
+        "tags": [
+          "operation-context-controller"
+        ],
+        "operationId": "getOperationContext",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationContext"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/circuitBreakerState": {
+      "get": {
+        "tags": [
+          "circuit-breaker-state-controller"
+        ],
+        "operationId": "getAll",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProtocolCircuitBreakerStateDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v0/circuitBreakerState/{protocolId}": {
+      "get": {
+        "tags": [
+          "circuit-breaker-state-controller"
+        ],
+        "operationId": "getTransitionsById",
+        "parameters": [
+          {
+            "name": "protocolId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProtocolCircuitBreakerTransitionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProviderUpdateRequest": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "WebSocketProtocolUpdateRequest": {
+        "required": [
+          "defaultChannel",
+          "name",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "defaultChannel": {
+            "type": "string"
+          }
+        }
+      },
+      "KafkaProtocolUpdateRequest": {
+        "required": [
+          "bootstrapServers",
+          "defaultTopic",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "bootstrapServers": {
+            "type": "string"
+          },
+          "defaultTopic": {
+            "type": "string"
+          }
+        }
+      },
+      "HttpProtocolUpdateRequest": {
+        "required": [
+          "baseUrl",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "WebSocketOperationUpdateRequest": {
+        "required": [
+          "createsConnection",
+          "event",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "createsConnection": {
+            "type": "boolean"
+          }
+        }
+      },
+      "KafkaOperationUpdateRequest": {
+        "required": [
+          "createsConnection",
+          "name",
+          "partition",
+          "topic"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "partition": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "createsConnection": {
+            "type": "boolean"
+          }
+        }
+      },
+      "HttpOperationUpdateRequest": {
+        "required": [
+          "endpoint",
+          "method",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "OperationObjectUpdateRequest": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the operation object",
+            "example": "Updated Object"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the operation object",
+            "example": "Updated detailed description"
+          },
+          "dynamicDefinition": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Dynamic definitions for the operation object",
+              "example": "{\"key1\":\"newValue\"}"
+            },
+            "description": "Dynamic definitions for the operation object",
+            "example": {
+              "key1": "newValue"
+            }
+          },
+          "enable": {
+            "type": "boolean",
+            "description": "Flag indicating whether this operation object should be enabled",
+            "example": true
+          }
+        },
+        "description": "Request object for updating an operation object. Version is immutable."
+      },
+      "IntegrationUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "WebSocketProtocolCreateRequest": {
+        "required": [
+          "defaultChannel",
+          "name",
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "defaultChannel": {
+            "type": "string"
+          }
+        }
+      },
+      "KafkaProtocolCreateRequest": {
+        "required": [
+          "bootstrapServers",
+          "defaultTopic",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "bootstrapServers": {
+            "type": "string"
+          },
+          "defaultTopic": {
+            "type": "string"
+          }
+        }
+      },
+      "HttpProtocolCreateRequest": {
+        "required": [
+          "baseUrl",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "WebSocketOperationCreateRequest": {
+        "required": [
+          "code",
+          "createsConnection",
+          "event",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "createsConnection": {
+            "type": "boolean"
+          }
+        }
+      },
+      "KafkaOperationCreateRequest": {
+        "required": [
+          "code",
+          "createsConnection",
+          "name",
+          "partition",
+          "topic"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "partition": {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          },
+          "createsConnection": {
+            "type": "boolean"
+          }
+        }
+      },
+      "HttpOperationCreateRequest": {
+        "required": [
+          "code",
+          "endpoint",
+          "method",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "OperationObjectCreateRequest": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the operation object",
+            "example": "Sample Object"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the operation object",
+            "example": "Detailed description"
+          },
+          "dynamicDefinition": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Dynamic definitions for the operation object",
+              "example": "{\"key1\":\"value1\"}"
+            },
+            "description": "Dynamic definitions for the operation object",
+            "example": {
+              "key1": "value1"
+            }
+          }
+        },
+        "description": "Request object for creating an operation object"
+      },
+      "IntegrationCreateRequest": {
+        "required": [
+          "code",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "ProviderCreateRequest": {
+        "required": [
+          "code",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "ProviderDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "integrationId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "ProtocolDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "OperationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "protocolId": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "OperationObjectDto": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier of the operation object",
+            "example": "obj_int_OP_payload"
+          },
+          "operationId": {
+            "type": "string",
+            "description": "Identifier of the parent operation",
+            "example": "op_ABC_DEF"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the operation object",
+            "example": "Sample Object"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the operation object",
+            "example": "Detailed description"
+          },
+          "version": {
+            "type": "string",
+            "description": "Version of the operation object",
+            "example": "1"
+          },
+          "enable": {
+            "type": "boolean",
+            "description": "Indicates whether the operation object is active",
+            "example": true
+          },
+          "dynamicDefinition": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "description": "Dynamic definitions for the operation object",
+              "example": "{\"key1\":\"value1\"}"
+            },
+            "description": "Dynamic definitions for the operation object",
+            "example": {
+              "key1": "value1"
+            }
+          }
+        },
+        "description": "Operation Object Data Transfer Object"
+      },
+      "OperationLogDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "integrationId": {
+            "type": "string"
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "protocolId": {
+            "type": "string"
+          },
+          "operationId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "data": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "requestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updateDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "response": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "PageOperationLogDto": {
+        "type": "object",
+        "properties": {
+          "totalElements": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageable": {
+            "$ref": "#/components/schemas/PageableObject"
+          },
+          "numberOfElements": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OperationLogDto"
+            }
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortObject"
+            }
+          },
+          "first": {
+            "type": "boolean"
+          },
+          "last": {
+            "type": "boolean"
+          },
+          "empty": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PageableObject": {
+        "type": "object",
+        "properties": {
+          "unpaged": {
+            "type": "boolean"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paged": {
+            "type": "boolean"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "offset": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SortObject"
+            }
+          }
+        }
+      },
+      "SortObject": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": "string"
+          },
+          "nullHandling": {
+            "type": "string"
+          },
+          "ascending": {
+            "type": "boolean"
+          },
+          "property": {
+            "type": "string"
+          },
+          "ignoreCase": {
+            "type": "boolean"
+          }
+        }
+      },
+      "IntegrationInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "OperationContext": {
+        "type": "object",
+        "properties": {
+          "integration": {
+            "$ref": "#/components/schemas/IntegrationInfo"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/ProviderInfo"
+          },
+          "protocol": {
+            "$ref": "#/components/schemas/ProtocolInfo"
+          },
+          "operation": {
+            "$ref": "#/components/schemas/OperationInfo"
+          },
+          "operationObject": {
+            "$ref": "#/components/schemas/OperationObjectInfo"
+          }
+        }
+      },
+      "OperationInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "endpoint": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "topic": {
+            "type": "string"
+          },
+          "partition": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createsConnection": {
+            "type": "boolean"
+          },
+          "event": {
+            "type": "string"
+          }
+        }
+      },
+      "OperationObjectInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "enable": {
+            "type": "boolean"
+          },
+          "dynamicDefinition": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ProtocolInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "bootstrapServers": {
+            "type": "string"
+          },
+          "defaultTopic": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "defaultChannel": {
+            "type": "string"
+          }
+        }
+      },
+      "ProviderInfo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "IntegrationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "ProtocolCircuitBreakerStateDto": {
+        "type": "object",
+        "properties": {
+          "protocolId": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "lastUpdated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "providerName": {
+            "type": "string"
+          }
+        }
+      },
+      "ProtocolCircuitBreakerTransitionDto": {
+        "type": "object",
+        "properties": {
+          "protocolId": {
+            "type": "string"
+          },
+          "fromState": {
+            "type": "string"
+          },
+          "toState": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
