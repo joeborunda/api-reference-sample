@@ -25,36 +25,25 @@ This will start a local development server at http://localhost:3000/api-referenc
 
 ## Deployment
 
-This site is configured for GitHub Pages deployment. To deploy:
+GitHub Pages deployment has been disabled for this repository. I removed the
+automatic Docusaurus `deploy` script and deployment configuration from the
+project to prevent accidental pushes to `gh-pages`.
+
+If you want to publish the site, pick one of these options:
+
+- Build and upload the static files to any static hosting provider (Netlify, Vercel, S3, etc.):
 
 ```bash
-# Build and deploy to GitHub Pages (gh-pages branch)
-npm run deploy
+# build the static site
+npm run build
+
+# serve locally to verify
+npm run serve
 ```
 
-The site will be deployed to: https://joeborunda.github.io/api-reference-sample/
+- Re-enable GitHub Pages deployment (not recommended unless intentional): restore the `deploy` script and deployment settings in `docusaurus.config.js`, then run `npm run deploy`. You can also set up a GitHub Actions workflow to build & deploy.
 
-### Manual Deployment
-
-If you prefer to build and deploy manually:
-
-1. Build the site:
-   ```bash
-   npm run build
-   ```
-
-2. The built files will be in the `build/` directory. You can serve these locally to test:
-   ```bash
-   npm run serve
-   ```
-
-3. To deploy manually, push the contents of `build/` to the `gh-pages` branch:
-   ```bash
-   git checkout gh-pages
-   git add .
-   git commit -m "Deploy website - Manual"
-   git push
-   ```
+If you'd like, I can update this README with a one-click deploy guide for Netlify or Vercel, or add explicit re-enable instructions for GitHub Pages.
 
 ## Project Structure
 
@@ -102,18 +91,20 @@ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Deployment
+## Build & Run Locally
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
+Use the commands below to build and run the site locally for testing.
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+# install dependencies
+yarn install
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+# start dev server
+yarn start
+
+# build production static site
+yarn build
+
+# serve the built site locally
+yarn serve
+```
