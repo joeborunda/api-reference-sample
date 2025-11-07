@@ -144,7 +144,12 @@ const config = {
 };
 
 
-// No GitHub Pages deployment configuration applied.
-// Export the base config directly so no automatic GitHub Pages
-// deployment settings are merged.
-export default config;
+// Deployment configuration (re-enabled)
+const deployConfig = {
+  deploymentBranch: 'gh-pages',
+};
+
+// Merge the base config with deployment settings
+const finalConfig = { ...config, ...deployConfig };
+
+export default finalConfig;
