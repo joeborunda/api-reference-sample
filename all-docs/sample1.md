@@ -1,6 +1,7 @@
 ---
 id: sample1
 title: Sample Doc 1
+slug: /
 ---
 
 # Sample Doc 1
