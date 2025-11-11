@@ -3,15 +3,7 @@ title: "Greetings from the API Reference"
 date: 2025-11-07
 author: Jose Borunda
 ---
-title: "Greetings from the API Reference"
-date: 2025-11-07
-author: "Jose Borunda"
-tags:
-  - api
-  - docs
-  - sample
-description: "A short welcome post for the API Reference sample site."
----
+
 
 Welcome — and thanks for visiting this API Reference sample site.
 
