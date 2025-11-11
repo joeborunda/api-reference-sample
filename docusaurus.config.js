@@ -80,9 +80,8 @@ const config = {
         id: 'allDocs',
         path: 'all-docs',
         routeBasePath: 'all-docs',
-        sidebarPath: require.resolve('./sidebars.js'),
-        // This uses the sidebar id defined in sidebars.js
-        sidebarId: 'allDocsSidebar',
+        // Use a dedicated sidebar file for this docs plugin instance
+        sidebarPath: require.resolve('./sidebarsAllDocs.js'),
         editUrl: 'https://github.com/joeborunda/api-reference-sample/edit/main/',
       },
     ],
@@ -106,12 +105,7 @@ const config = {
             position: 'left',
             label: 'API Reference',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'allDocsSidebar',
-            position: 'left',
-            label: 'All docs...',
-          },
+          {to: '/all-docs', label: 'All docs...', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/joeborunda/api-reference-sample',
