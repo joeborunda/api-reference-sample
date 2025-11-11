@@ -82,6 +82,8 @@ const config = {
         routeBasePath: 'all-docs',
         // Use a dedicated sidebar file for this docs plugin instance
         sidebarPath: require.resolve('./sidebarsAllDocs.js'),
+        // Set the default doc served at /all-docs
+        homePageId: 'sample1',
         editUrl: 'https://github.com/joeborunda/api-reference-sample/edit/main/',
       },
     ],
