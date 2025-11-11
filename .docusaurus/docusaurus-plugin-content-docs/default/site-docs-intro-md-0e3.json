@@ -1,0 +1,18 @@
+{
+  "id": "intro",
+  "title": "Introduction",
+  "description": "Welcome to the API Reference Sample documentation. This site contains example",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/api-reference-sample/docs/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Introduction",
+    "slug": "/intro"
+  }
+}

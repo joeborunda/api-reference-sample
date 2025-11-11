@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapi_reference_sample=self.webpackChunkapi_reference_sample||[]).push([[903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/api-reference-sample/blog","blogTitle":"Blog","authorsListPath":"/api-reference-sample/blog/authors"}')}}]);

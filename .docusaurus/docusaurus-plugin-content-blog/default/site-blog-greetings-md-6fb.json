@@ -1,0 +1,24 @@
+{
+  "permalink": "/api-reference-sample/blog/Greetings",
+  "editUrl": "https://github.com/joeborunda/api-reference-sample/edit/main/blog/Greetings.md",
+  "source": "@site/blog/Greetings.md",
+  "title": "Greetings from the API Reference",
+  "description": "Welcome — and thanks for visiting this API Reference sample site.",
+  "date": "2025-11-07T00:00:00.000Z",
+  "tags": [],
+  "readingTime": 0.53,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Jose Borunda",
+      "key": null,
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "title": "Greetings from the API Reference",
+    "date": "2025-11-07T00:00:00.000Z",
+    "author": "Jose Borunda"
+  },
+  "unlisted": false
+}

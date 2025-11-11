@@ -1,0 +1,16 @@
+{
+  "id": "style-guide",
+  "title": "Technical Documentation Style Guide Sample",
+  "description": "About this guide",
+  "source": "@site/all-docs/style-guide.md",
+  "sourceDirName": ".",
+  "slug": "/style-guide",
+  "permalink": "/api-reference-sample/all-docs/style-guide",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/joeborunda/api-reference-sample/edit/main/all-docs/style-guide.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "sidebar"
+}

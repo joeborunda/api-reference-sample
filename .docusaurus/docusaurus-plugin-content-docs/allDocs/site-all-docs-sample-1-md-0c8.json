@@ -1,0 +1,19 @@
+{
+  "id": "sample1",
+  "title": "Sample Doc 1",
+  "description": "This is a sample document in the \"All docs...\" section.",
+  "source": "@site/all-docs/sample1.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/api-reference-sample/all-docs/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/joeborunda/api-reference-sample/edit/main/all-docs/sample1.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "sample1",
+    "title": "Sample Doc 1",
+    "slug": "/"
+  }
+}

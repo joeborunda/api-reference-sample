@@ -1,0 +1,9 @@
+{
+  "type": "mdx",
+  "permalink": "/api-reference-sample/api-reference-intro",
+  "source": "@site/src/pages/api-reference-intro.md",
+  "title": "API Reference Sample",
+  "description": "Introduction",
+  "frontMatter": {},
+  "unlisted": false
+}

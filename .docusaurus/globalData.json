@@ -1,0 +1,94 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/api-reference-sample/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/api-reference-sample/docs",
+          "mainDocId": "hello",
+          "docs": [
+            {
+              "id": "authentication",
+              "path": "/api-reference-sample/docs/authentication",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "errors",
+              "path": "/api-reference-sample/docs/errors",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started-guide",
+              "path": "/api-reference-sample/docs/getting-started-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "hello",
+              "path": "/api-reference-sample/docs/hello",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/api-reference-sample/docs/intro"
+            },
+            {
+              "id": "users",
+              "path": "/api-reference-sample/docs/users",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/api-reference-sample/docs/hello",
+                "label": "hello"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "allDocs": {
+      "path": "/api-reference-sample/all-docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/api-reference-sample/all-docs",
+          "mainDocId": "sample1",
+          "docs": [
+            {
+              "id": "sample1",
+              "path": "/api-reference-sample/all-docs/"
+            },
+            {
+              "id": "sample2",
+              "path": "/api-reference-sample/all-docs/sample2"
+            },
+            {
+              "id": "style-guide",
+              "path": "/api-reference-sample/all-docs/style-guide",
+              "sidebar": "sidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "sidebar": {
+              "link": {
+                "path": "/api-reference-sample/all-docs/style-guide",
+                "label": "style-guide"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

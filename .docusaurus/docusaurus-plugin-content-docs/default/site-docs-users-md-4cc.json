@@ -1,0 +1,19 @@
+{
+  "id": "users",
+  "title": "Users API",
+  "description": "The Users API allows you to create, read, update, and delete user accounts in the system.",
+  "source": "@site/docs/users.md",
+  "sourceDirName": ".",
+  "slug": "/users",
+  "permalink": "/api-reference-sample/docs/users",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Error Reference",
+    "permalink": "/api-reference-sample/docs/errors"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "style-guide",
+  "title": "Technical Documentation Style Guide Sample",
+  "description": "About this guide",
+  "source": "@site/docs/style-guide.md",
+  "sourceDirName": ".",
+  "slug": "/style-guide",
+  "permalink": "/api-reference-sample/docs/style-guide",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

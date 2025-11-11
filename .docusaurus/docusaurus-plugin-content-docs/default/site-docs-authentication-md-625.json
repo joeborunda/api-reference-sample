@@ -1,0 +1,23 @@
+{
+  "id": "authentication",
+  "title": "Authentication",
+  "description": "Overview",
+  "source": "@site/docs/authentication.md",
+  "sourceDirName": ".",
+  "slug": "/authentication",
+  "permalink": "/api-reference-sample/docs/authentication",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting Started Guide",
+    "permalink": "/api-reference-sample/docs/getting-started-guide"
+  },
+  "next": {
+    "title": "Error Reference",
+    "permalink": "/api-reference-sample/docs/errors"
+  }
+}

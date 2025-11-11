@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapi_reference_sample=self.webpackChunkapi_reference_sample||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Greetings from the API Reference","permalink":"/api-reference-sample/blog/Greetings","unlisted":false,"date":"2025-11-07T00:00:00.000Z"}]}')}}]);

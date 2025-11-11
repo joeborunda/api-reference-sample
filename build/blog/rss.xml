@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>API Reference Sample Blog</title>
+        <link>https://joeborunda.github.io/api-reference-sample/blog</link>
+        <description>API Reference Sample Blog</description>
+        <lastBuildDate>Fri, 07 Nov 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Greetings from the API Reference]]></title>
+            <link>https://joeborunda.github.io/api-reference-sample/blog/Greetings</link>
+            <guid>https://joeborunda.github.io/api-reference-sample/blog/Greetings</guid>
+            <pubDate>Fri, 07 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome — and thanks for visiting this API Reference sample site.]]></description>
+            <content:encoded><![CDATA[<p>Welcome — and thanks for visiting this API Reference sample site.</p>
+<p>This repository demonstrates a concise, developer-focused documentation style I use when creating API references for clients. The site includes:</p>
+<ul>
+<li>Clear endpoint summaries with parameter descriptions</li>
+<li>Example requests and responses (JSON)</li>
+<li>Authentication and error-handling guidance</li>
+<li>Practical integration notes and usage tips</li>
+</ul>
+<p>What to expect next</p>
+<p>Over the next pages you'll see a few example endpoints, sample requests/responses, and an example SDK snippet to demonstrate the developer experience. If you'd like a custom example (e.g., GraphQL schema, webhook docs, or SDK samples), open an issue or message me and I will add it.</p>
+<p>— José</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

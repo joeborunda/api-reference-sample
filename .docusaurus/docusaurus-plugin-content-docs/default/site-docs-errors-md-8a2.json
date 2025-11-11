@@ -1,0 +1,23 @@
+{
+  "id": "errors",
+  "title": "Error Reference",
+  "description": "This page provides a comprehensive guide to error handling in the Sample API.",
+  "source": "@site/docs/errors.md",
+  "sourceDirName": ".",
+  "slug": "/errors",
+  "permalink": "/api-reference-sample/docs/errors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Authentication",
+    "permalink": "/api-reference-sample/docs/authentication"
+  },
+  "next": {
+    "title": "Users API",
+    "permalink": "/api-reference-sample/docs/users"
+  }
+}
