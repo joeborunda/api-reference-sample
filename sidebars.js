@@ -25,6 +25,10 @@ const sidebars = {
         'errors',
       ],
     },
+    allDocsSidebar: [
+      'sample1',
+      'sample2',
+    ],
     {
       type: 'category',
       label: 'API Reference',

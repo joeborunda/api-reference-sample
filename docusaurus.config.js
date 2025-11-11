@@ -73,6 +73,21 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'allDocs',
+        path: 'all-docs',
+        routeBasePath: 'all-docs',
+        sidebarPath: require.resolve('./sidebars.js'),
+        // This uses the sidebar id defined in sidebars.js
+        sidebarId: 'allDocsSidebar',
+        editUrl: 'https://github.com/joeborunda/api-reference-sample/edit/main/',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -90,6 +105,12 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'API Reference',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'allDocsSidebar',
+            position: 'left',
+            label: 'All docs...',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
