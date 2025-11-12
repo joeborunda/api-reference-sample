@@ -106,15 +106,15 @@ If other specifications are applicable to the whole API set, define your own sec
 * License
 * Contact
 
-## About the "API {Resource name}" section
+## About the "API Resource name" section
 
-Use the _{Resource name}_ section to provide reference information for a subset of API endpoints that are grouped around a resource type. You can use this section to describe the data model of the resource type.
+Use the _Resource name_ section to provide reference information for a subset of API endpoints that are grouped around a resource type. You can use this section to describe the data model of the resource type.
 
 The template assumes that the API endpoints are grouped by the resource type that they are interacting with.
 
 **Title**
 
-Substitute the document title `{Resource name}` with the actual resource name. The resource name usually uses the same naming convention as in the source code.
+Substitute the document title `Resource name` with the actual resource name. The resource name usually uses the same naming convention as in the source code.
 
 **Short description**
 
@@ -148,13 +148,13 @@ List the endpoints that can interact with this resource type in a table with the
 * Add a link to each of the endpoint names that directs users to the corresponding endpoint reference.
 * For endpoints that are deprecated but still in use, add a note in the "Description" column. Consider using the strikethrough format in each cell of the line to indicate the deprecation status.
 
-## About the "API {Endpoint name}" section
+## About the "API Endpoint name" section
 
-The _{Endpoint name}_ section provides reference information for a specific API endpoint. It describes the specifications of an API endpoint, such as the method, URL, request, and response schema.
+The _Endpoint name_ section provides reference information for a specific API endpoint. It describes the specifications of an API endpoint, such as the method, URL, request, and response schema.
 
 **Title**
 
-Substitute the document title `{Endpoint name}` with the actual endpoint name.
+Substitute the document title `Endpoint name` with the actual endpoint name.
 
 **Tips**:
 
@@ -166,11 +166,11 @@ Substitute the document title `{Endpoint name}` with the actual endpoint name.
 
 Provide a one-line description of what the API does. Start the description with a verb. For example:
 
-* For "get" operations: `Retrieves a {resource}.`
-* For "list" operations: `Lists {resources}.`
-* For "create" operations: `Creates a {resource}.` or `Inserts a {resource}.`
-* For "update" operations: `Updates a {resource}.`
-* For "delete" operations: `Removes a {resource}.`
+* For "get" operations: `Retrieves a resource.`
+* For "list" operations: `Lists resources.`
+* For "create" operations: `Creates a resource.` or `Inserts a resource.`
+* For "update" operations: `Updates a resource.`
+* For "delete" operations: `Removes a resource.`
 
 Ensure that the description here is consistent with that listed in the resource reference.
 
@@ -183,9 +183,9 @@ The name of the endpoint usually starts with a verb in the imperative mood, such
 **Tips**:
 
 * Use preformatted code blocks to make your code distinctive from other text blocks. For example, in HTML, use the `<pre>` element; in Markdown, use three backticks.
-* Replace {METHOD} with the actual request method and capitalize all letters. For example, `POST`.
-* In the {request_url} segment, start with a slash character `/` and only provide the URL path (the segment after the hostname). The base URL can be omitted if you have already documented it in the API overview. For example, `/v2/users`.
-* If the {request_url} contains path variables, use a placeholder to indicate the variable name. The format of placeholders should be consistent throughout the documentation set and conform to your organization's guidelines. As an option, you can use snake case characters in curly brace `{}`, delimited by underscores. For example, `{user_id}`.
+* Replace METHOD with the actual request method and capitalize all letters. For example, `POST`.
+* In the request_url segment, start with a slash character `/` and only provide the URL path (the segment after the hostname). The base URL can be omitted if you have already documented it in the API overview. For example, `/v2/users`.
+* If the request_url contains path variables, use a placeholder to indicate the variable name. The format of placeholders should be consistent throughout the documentation set and conform to your organization's guidelines. As an option, you can use snake case characters in curly braces, delimited by underscores. For example, `user_id`.
 * Optionally use a different color to make the path parameters easily identifiable.
 * Do not add slash characters `/` at the end.
 
@@ -227,7 +227,7 @@ If no request parameters or request body are supported, specify "None" in this s
   * Default values. For example: "The default value is 0."
   * Minimum/maximum values. For example: "The value must be within the range 100 - 999 (both inclusive)."
   * Allowed values. For example: "The allowed values are `left` and `right`."
-  * Usage restrictions. For example: "Use this parameter only when {a condition} is true."
+  * Usage restrictions. For example: "Use this parameter only when a condition is true."
   * Any limit applicable to this field. For example, "The ID must be 16 characters long."
 * Do not leave cells empty in the table. If there is no content, fill with "N/A" (short for "not applicable").
 

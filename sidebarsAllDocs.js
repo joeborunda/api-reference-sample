@@ -8,6 +8,7 @@ const sidebars = {
   sidebar: [
     'sample1',
     'sample2',
+    'style-guide',
   ],
 };
 

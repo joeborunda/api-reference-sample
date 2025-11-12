@@ -5,6 +5,11 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import {fileURLToPath} from 'url';
+import {dirname, resolve} from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -49,7 +54,7 @@ const config = {
       ({
         docs: {
           // Use require.resolve for a reliable absolute path to the sidebar file
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: resolve(__dirname, './sidebars.js'),
         },
         blog: {
           showReadingTime: true,
@@ -81,7 +86,7 @@ const config = {
         path: 'all-docs',
         routeBasePath: 'all-docs',
         // Use a dedicated sidebar file for this docs plugin instance
-        sidebarPath: require.resolve('./sidebarsAllDocs.js'),
+        sidebarPath: resolve(__dirname, './sidebarsAllDocs.js'),
         editUrl: 'https://github.com/joeborunda/api-reference-sample/edit/main/',
       },
     ],
